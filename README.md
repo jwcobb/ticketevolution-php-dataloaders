@@ -21,5 +21,7 @@ The Ticket Evolution PHP Library **requires PHP 5.3.3 or later** and Zend Framew
 
 4. Once you have Composer installed simply `cd` to your directory for this project and execute `composer install`
 
+5. Run the SQL in `/scripts` starting with `create_tables.mysql` and then running any additional scripts in chronological order by the date in the filename.
+
 ## LICENSE
 The files in this archive are released under the BSD 3-Clause License. You can find a copy of this license in `LICENSE.txt`.
