@@ -1,0 +1,31 @@
+{
+    "name": "teamonetickets/ticket-evolution-dataloaders",
+    "type": "project",
+    "description": "Some simple scripts for caching data from the Ticket Evolution API.",
+    "keywords": ["Ticket Evolution", "ticket"],
+    "homepage": "https://github.com/TeamOneTickets/ticket-evolution-dataloaders",
+    "license": "BSD-3-Clause",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ticketevolution/ticketevolution-php",
+            "branch": "2.0"
+        }
+
+    ],
+    "authors": [
+        {
+            "name": "J Cobb"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "ticketevolution/ticketevolution-php": "2.0.0"
+    },
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/TeamOneTickets/ticket-evolution-dataloaders/issues",
+        "wiki": "https://github.com/TeamOneTickets/ticket-evolution-dataloaders/wiki",
+        "source": "https://github.com/TeamOneTickets/ticket-evolution-dataloaders"
+    }
+}
