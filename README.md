@@ -1,12 +1,8 @@
 # DataLoaders for caching catalog data from the Ticket Evolution API
 
 ## RELEASE INFORMATION
+See [CHANGELOG.md](https://github.com/TeamOneTickets/ticket-evolution-dataloaders/blob/master/CHANGELOG.md)
 
-### May 17, 2013 1.0
-- Initial release after splitting this off from the [original project](https://github.com/ticketevolution/ticketevolution-php).
-- Rewrite to use [Bootstrap](http://twitter.github.io/bootstrap/) and [Composer](http://getcomposer.org/).
-
-----
 
 ## SYSTEM REQUIREMENTS
 The Ticket Evolution PHP Library **requires PHP 5.3.3 or later** and Zend Framework 1.
@@ -23,5 +19,6 @@ The Ticket Evolution PHP Library **requires PHP 5.3.3 or later** and Zend Framew
 
 5. Run the SQL in `/scripts` starting with `create_tables.mysql` and then running any additional scripts in chronological order by the date in the filename.
 
+
 ## LICENSE
-The files in this archive are released under the BSD 3-Clause License. You can find a copy of this license in `LICENSE.txt`.
+The files in this archive are released under the [BSD 3-Clause License](http://opensource.org/licenses/BSD-3-Clause). You can find a copy of this license in [LICENSE.txt](https://github.com/TeamOneTickets/ticket-evolution-dataloaders/blob/master/LICENSE.txt).
