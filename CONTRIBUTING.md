@@ -8,7 +8,7 @@ top of things.
 ## Getting Started
 
 * Make sure you have a [GitHub account](https://github.com/signup/free)
-* Submit a ticket for your issue, assuming one does not already exist.
+* [Submit an Issue](https://github.com/TeamOneTickets/ticket-evolution-dataloaders/issues), assuming one does not already exist.
   * Clearly describe the issue including steps to reproduce when it is a bug.
   * Make sure you fill in the earliest version that you know has the issue.
 * Fork the repository on GitHub
@@ -36,8 +36,8 @@ top of things.
 ## Submitting Changes
 
 * Push your changes to a topic branch in your fork of the repository.
-* Submit a pull request to the repository in the puppetlabs organization.
-* Update your Redmine ticket to mark that you have submitted code and are ready for it to be reviewed.
+* Submit a pull request to the repository in the TeamOneTickets organization.
+* Update your Issue to mark that you have submitted code and are ready for it to be reviewed.
   * Include a link to the pull request in the ticket
 
 # Syntax
