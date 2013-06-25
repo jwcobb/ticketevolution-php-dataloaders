@@ -1,3 +1,6 @@
+## 1.0.3 (June 25, 2013)
+- Add script to add some table columns that are now saved/updated when using [Ticket Evolution PHP Library](https://github.com/ticketevolution/ticketevolution-php) 2.0.5+
+
 ## 1.0.2 (June 11, 2013)
 - Rearrange `README.md` and add `CHANGELOG.md`.
 
