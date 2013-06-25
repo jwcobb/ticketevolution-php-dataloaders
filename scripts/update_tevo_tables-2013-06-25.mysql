@@ -1,0 +1,7 @@
+ALTER TABLE  `tevoEvents` ADD  `longTermPopularityScore` DECIMAL( 7, 6 ) UNSIGNED NOT NULL DEFAULT  '0.0' AFTER  `popularityScore` ,
+ADD INDEX (  `longTermPopularityScore` );
+
+ALTER TABLE  `tevoOffices` ADD  `isPoBox` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT  '0' AFTER  `countryCode`;
+
+ALTER TABLE  `tevoOffices` ADD  `isPos` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT  '0' AFTER  `timezone` ,
+ADD  `evoPayDiscount` DECIMAL( 4, 2 ) UNSIGNED NOT NULL DEFAULT  '0.00' AFTER  `isPos`;
