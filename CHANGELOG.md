@@ -1,3 +1,8 @@
+## 1.1 (September 20, 2013)
+- Further separated this project from the [Ticket Evolution PHP Library](https://github.com/ticketevolution/ticketevolution-php) by moving some classes from there to here.
+- Changed URL/owner/copyright.
+- Updated some docblock info.
+
 ## 1.0.3 (June 25, 2013)
 - Add script to add some table columns that are now saved/updated when using [Ticket Evolution PHP Library](https://github.com/ticketevolution/ticketevolution-php) 2.0.5+
 
