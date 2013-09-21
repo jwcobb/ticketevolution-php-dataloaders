@@ -1,21 +1,15 @@
 <?php
 
 /**
- * DataLoaders for use with the Ticket Evolution PHP Library
- *
  * LICENSE
  *
- * This source file is subject to the BSD 3-Clause License that is bundled
+ * This source file is subject to the new BSD (3-Clause) License that is bundled
  * with this package in the file LICENSE.txt.
  * It is also available through the world-wide-web at this URL:
- * https://github.com/TeamOneTickets/ticket-evolution-dataloaders/blob/master/LICENSE.txt
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@teamonetickets.com so we can send you a copy immediately.
+ * http://choosealicense.com/licenses/bsd-3-clause/
  *
- * @author      J Cobb <j@teamonetickets.com>
- * @copyright   Copyright (c) 2013 Team One Tickets & Sports Tours, Inc. (http://www.teamonetickets.com)
- * @license     https://github.com/TeamOneTickets/ticket-evolution-dataloaders/blob/master/LICENSE.txt     BSD 3-Clause License
+ * @copyright   Copyright (c) 2013 J Cobb (http://jcobb.org)
+ * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
 
 
@@ -35,7 +29,7 @@ require_once '../application/header.phtml';
 		    <p>These “DataLoader” scripts can be used to populate local database tables with a cache of the Ticket Evolution data. If you choose to do this then you should be sure to run each of these scripts at least daily. We suggest adding them to your <code>crontab</code> or <code>launchd</code> on your server.</p>
 
             <?php
-                $table = new \TicketEvolution\Db\Table\DataLoaderStatus();
+                $table = new \DataLoader\Db\Table\DataLoaderStatus();
 
                 $scripts = array(
                     'brokerages'        => array(
