@@ -16,6 +16,7 @@
 
 
 namespace DataLoader\DataLoader;
+use DataLoader\Exception as ParentException;
 
 
 /**
@@ -24,6 +25,6 @@ namespace DataLoader\DataLoader;
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-class Exception extends \TicketEvolution\Exception
+class Exception extends ParentException
 {
 }

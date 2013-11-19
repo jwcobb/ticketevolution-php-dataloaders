@@ -17,6 +17,8 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\AbstractTable;
+use DateTime;
 
 
 /**
@@ -202,7 +204,7 @@ class AbstractTable extends \Zend_Db_Table_Abstract
             $column = lcfirst(preg_replace('/^tevo(\w{1})/i', "$1", $column));
             if (is_array($value)) {
                 $select->where($column ." IN (?)", $value);
-            } elseif ($value instanceof \DateTime) {
+            } elseif ($value instanceof DateTime) {
                 $select->where($column ." = ?", $value->format('c'));
             } else {
                 $select->where($column ." = ?", $value);
@@ -229,7 +231,7 @@ class AbstractTable extends \Zend_Db_Table_Abstract
             } else {
                 $results = $this->fetchAll($select);
             }
-        } catch(Exception $e) {
+        } catch(\Exception $e) {
             throw new namespace\Exception($e);
         }
         return $results;

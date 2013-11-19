@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\AbstractTable;
 
 
 /**
@@ -96,7 +97,7 @@ class OfficeHours extends AbstractTable
      * @var array
      */
     protected $_referenceMap    = array(
-        'Office'            => array(
+        'Offices'            => array(
             'columns'           => 'officeId',
             'refTableClass'     => 'DataLoader\Db\Table\Offices',
             'refColumns'        => 'officeId',

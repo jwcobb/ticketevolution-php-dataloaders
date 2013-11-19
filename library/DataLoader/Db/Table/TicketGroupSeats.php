@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\AbstractTable;
 
 
 /**
@@ -96,7 +97,7 @@ class TicketGroupSeats extends AbstractTable
      * @var array
      */
     protected $_referenceMap    = array(
-        'TicketGroup'       => array(
+        'TicketGroups'       => array(
             'columns'           => 'ticketGroupId',
             'refTableClass'     => 'DataLoader\Db\Table\TicketGroups',
             'refColumns'        => 'ticketGroupId',

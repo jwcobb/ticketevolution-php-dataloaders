@@ -119,7 +119,7 @@ class Deleted extends AbstractDataLoader
                    . 'Successful delete() of <strong>' . $result->id . '</strong>: in `tevoEvents` and the related `tevoEventPerformers`'
                    . '</p>' . PHP_EOL;
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             if ($this->_showProgress) {
                 echo '<p>'
                    . 'Error attempting to delete() <strong>' . $result->id . '</strong>: in `tevoEvents` and the related `tevoEventPerformers`'

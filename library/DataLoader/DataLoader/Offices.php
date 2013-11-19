@@ -16,6 +16,10 @@
 
 
 namespace DataLoader\DataLoader;
+use DataLoader\DataLoader\AbstractDataLoader;
+use DataLoader\Db\Table\OfficeEmails as OfficeEmailsTable;
+use DataLoader\Db\Table\OfficeHours as OfficeHoursTable;
+use TicketEvolution\DateTime;
 
 
 /**
@@ -141,7 +145,7 @@ class Offices extends AbstractDataLoader
         // Save any email addresses to a separate table
         if (isset($result->email[0])) {
             // Create an object for the `tevoOfficeEmails` table
-            $emailsTable = new \DataLoader\Db\Table\OfficeEmails();
+            $emailsTable = new OfficeEmailsTable();
 
             // Initialize an array of emails
             $emailArray = array();
@@ -155,7 +159,7 @@ class Offices extends AbstractDataLoader
                     'lastModifiedDate'      => (string) $this->_startTime->format('c'),
                 );
 
-                if ($row = $emailsTable->fetchRow($emailsTable->select()->where("`officeId` = ?", $data['officeId'])->where("`officeEmailsStatus` = ?", (int) 0)->where("`email` = ?", $data['email']))) {
+                if ($row = $emailsTable->fetchRow($emailsTable->select()->where("`officeId` = ?", $data['officeId'])->where("`email` = ?", $data['email']))) {
                     $row->setFromArray($data);
                 } else {
                     $row = $emailsTable->createRow($data);
@@ -193,23 +197,23 @@ class Offices extends AbstractDataLoader
         // Save any office hours to a separate table
         if (isset($result->hours[0])) {
             // Create an object for the `tevoOfficeHours` table
-            $hoursTable = new \DataLoader\Db\Table\OfficeHours();
+            $hoursTable = new OfficeHoursTable();
 
             // Initialize an array of emails
             $hoursIdArray = array();
 
             // Loop through the emails and add them to the `tevoOfficeEmails` table
             foreach ($result->hours as $hour) {
-                $openTime = new \DateTime($hour->open);
-                $closeTime = new \DateTime($hour->close);
+                $openTime = new DateTime($hour->open);
+                $closeTime = new DateTime($hour->close);
 
                 $data = array(
                     'officeHoursId'     => (int)    $hour->id,
                     'officeId'          => (int)    $result->id,
                     'dayOfWeek'         => (int)    $hour->day_of_week,
                     'isClosed'          => (int)    $hour->closed,
-                    'open'              => (string) $openTime->format(\TicketEvolution\DateTime::MYSQL_TIME),
-                    'close'             => (string) $closeTime->format(\TicketEvolution\DateTime::MYSQL_TIME),
+                    'open'              => (string) $openTime->format(DateTime::MYSQL_TIME),
+                    'close'             => (string) $closeTime->format(DateTime::MYSQL_TIME),
                     'officeHoursStatus' => (int)    1,
                     'lastModifiedDate'  => (string) $this->_startTime->format('c'),
                 );

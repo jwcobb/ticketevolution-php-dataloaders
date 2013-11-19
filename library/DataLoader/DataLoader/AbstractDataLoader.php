@@ -16,6 +16,11 @@
 
 
 namespace DataLoader\DataLoader;
+use TicketEvolution\Webservice;
+use TicketEvolution\DateTime;
+use DateTimeZone;
+use Zend_Measure_Binary;
+use Zend_Loader;
 
 
 /**
@@ -196,10 +201,10 @@ abstract class AbstractDataLoader
      * @param TicketEvolution\Webservice $webService    TicketEvolution\Webservice object to use for API calls
      * @param array $options    Array of options
      */
-    public function __construct(\TicketEvolution\Webservice $webService, array $options=array())
+    public function __construct(Webservice $webService, array $options=array())
     {
         // Set the startTime to now
-        $this->_startTime = new \DateTime();
+        $this->_startTime = new DateTime();
 
         // Reference to the webService object
         $this->_webService = $webService;
@@ -234,8 +239,8 @@ abstract class AbstractDataLoader
          * been added/changed/deleted since then
          */
         if (!empty($options['lastRun'])) {
-            if (!$options['lastRun'] instanceOf \DateTime) {
-                if (!$this->_lastRun = new \DateTime($options['lastRun'])) {
+            if (!$options['lastRun'] instanceOf DateTime) {
+                if (!$this->_lastRun = new DateTime($options['lastRun'])) {
                     throw new namespace\Exception('The $lastRun date you provided appears to be malformed');
                 }
             } else {
@@ -244,14 +249,14 @@ abstract class AbstractDataLoader
         } else {
             // The table should have either a previously set value
             // OR a default date of 2010-01-01 for the column
-            $this->_lastRun = new \DateTime($this->_statusRow->lastRun);
+            $this->_lastRun = new DateTime($this->_statusRow->lastRun);
         }
 
         /**
          * Convert $_lastRun to UTC because the API currently ignores the time if it is
          * not specified as UTC. This is not expected behavior and should be fixed soon.
          */
-        $this->_lastRun->setTimezone(new \DateTimeZone('UTC'));
+        $this->_lastRun->setTimezone(new DateTimeZone('UTC'));
 
 
     }
@@ -353,7 +358,7 @@ abstract class AbstractDataLoader
 
         try {
             $this->_statusRow->save();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             throw new namespace\Exception($e);
         }
 
@@ -362,10 +367,10 @@ abstract class AbstractDataLoader
         }
 
         if ($this->_showMemory) {
-            $curMem = new \Zend_Measure_Binary(memory_get_usage(true), \Zend_Measure_Binary::BYTE);
-            $peakMem = new \Zend_Measure_Binary(memory_get_peak_usage(true), \Zend_Measure_Binary::BYTE);
-            echo '<p class="lead">Current memory usage at end of script: ' . $curMem->convertTo(\Zend_Measure_Binary::MEGABYTE) . '</p>' . PHP_EOL
-               . '<p class="lead">PEAK memory usage: ' . $peakMem->convertTo(\Zend_Measure_Binary::MEGABYTE) . '</p>' . PHP_EOL;
+            $curMem = new Zend_Measure_Binary(memory_get_usage(true), Zend_Measure_Binary::BYTE);
+            $peakMem = new Zend_Measure_Binary(memory_get_peak_usage(true), Zend_Measure_Binary::BYTE);
+            echo '<p class="lead">Current memory usage at end of script: ' . $curMem->convertTo(Zend_Measure_Binary::MEGABYTE) . '</p>' . PHP_EOL
+               . '<p class="lead">PEAK memory usage: ' . $peakMem->convertTo(Zend_Measure_Binary::MEGABYTE) . '</p>' . PHP_EOL;
         }
 
 
@@ -416,10 +421,10 @@ abstract class AbstractDataLoader
 
         if ($this->_showMemory) {
             $curMem = memory_get_usage(true);
-            $curMem = new \Zend_Measure_Binary(memory_get_usage(true), \Zend_Measure_Binary::BYTE);
+            $curMem = new Zend_Measure_Binary(memory_get_usage(true), Zend_Measure_Binary::BYTE);
             echo '<h4>Current memory usage after fetching page '
                . $options['page'] . ' of ' . $this->totalPages . ': '
-               . $curMem->convertTo(\Zend_Measure_Binary::MEGABYTE)
+               . $curMem->convertTo(Zend_Measure_Binary::MEGABYTE)
                . '</h4>' . PHP_EOL;
         }
 
@@ -439,10 +444,10 @@ abstract class AbstractDataLoader
         }
 
         if ($this->_showMemory) {
-            $curMem = new \Zend_Measure_Binary(memory_get_usage(true), \Zend_Measure_Binary::BYTE);
+            $curMem = new Zend_Measure_Binary(memory_get_usage(true), Zend_Measure_Binary::BYTE);
             echo '<h4>Current memory usage after database work of page '
                . $options['page'] . ' of ' . $this->totalPages . ': '
-               . $curMem->convertTo(\Zend_Measure_Binary::MEGABYTE)
+               . $curMem->convertTo(Zend_Measure_Binary::MEGABYTE)
                . '</h4>' . PHP_EOL;
         }
 
@@ -469,7 +474,7 @@ abstract class AbstractDataLoader
              * if the specified class cannot be loaded.
              */
             if (!class_exists($this->_tableClass)) {
-                \Zend_Loader::loadClass($this->_tableClass);
+                Zend_Loader::loadClass($this->_tableClass);
             }
 
             /**

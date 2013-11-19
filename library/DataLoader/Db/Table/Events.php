@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\AbstractTable;
 
 
 /**
@@ -98,17 +99,17 @@ class Events extends AbstractTable
      * @var array
      */
     protected $_referenceMap    = array(
-        'Venue'             => array(
+        'Venues'             => array(
             'columns'           => 'venueId',
             'refTableClass'     => 'DataLoader\Db\Table\Venues',
             'refColumns'        => 'venueId',
         ),
-        'Configuration'     => array(
+        'Configurations'     => array(
             'columns'           => 'configurationId',
             'refTableClass'     => 'DataLoader\Db\Table\Configurations',
             'refColumns'        => 'configurationId',
         ),
-        'Category'          => array(
+        'Categories'          => array(
             'columns'           => 'categoryId',
             'refTableClass'     => 'DataLoader\Db\Table\Categories',
             'refColumns'        => 'categoryId',

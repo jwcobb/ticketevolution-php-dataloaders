@@ -16,7 +16,8 @@
  */
 
 
-namespace DataLoader\DataLoader\Db;
+namespace DataLoader\Db;
+use DataLoader\Db\Table\AbstractTable;
 
 
 /**
@@ -26,6 +27,6 @@ namespace DataLoader\DataLoader\Db;
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-class Table extends Table\AbstractTable
+class Table extends AbstractTable
 {
 }
