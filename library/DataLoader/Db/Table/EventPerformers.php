@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\AbstractTable;
 
 
 /**
@@ -96,13 +97,13 @@ class EventPerformers extends AbstractTable
      * @var array
      */
     protected $_referenceMap    = array(
-        'Event'             => array(
+        'Events'             => array(
             'columns'           => 'eventId',
             'refTableClass'     => 'DataLoader\Db\Table\Events',
             'refColumns'        => 'eventId',
             'onDelete'          => self::CASCADE,
         ),
-        'Performer'         => array(
+        'Performers'         => array(
             'columns'           => 'performerId',
             'refTableClass'     => 'DataLoader\Db\Table\Performers',
             'refColumns'        => 'performerId',

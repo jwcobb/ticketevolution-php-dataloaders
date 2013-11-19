@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table\Row;
+use Zend_Db_Table_Row_Abstract as ParentAbstract;
 
 
 /**
@@ -26,7 +27,7 @@ namespace DataLoader\Db\Table\Row;
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-abstract class AbstractRow extends \Zend_Db_Table_Row_Abstract
+abstract class AbstractRow extends ParentAbstract
 {
     /**
      * Allows pre-insert logic to be applied to row.

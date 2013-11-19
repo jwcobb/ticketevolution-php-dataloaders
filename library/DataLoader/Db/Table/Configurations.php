@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\AbstractTable;
 
 
 /**
@@ -96,7 +97,7 @@ class Configurations extends AbstractTable
      * @var array
      */
     protected $_referenceMap    = array(
-        'Venue'   => array(
+        'Venues'   => array(
             'columns'           => 'venueId',
             'refTableClass'     => 'DataLoader\Db\Table\Venues',
             'refColumns'        => 'venueId'

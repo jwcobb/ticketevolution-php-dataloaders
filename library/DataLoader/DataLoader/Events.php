@@ -16,6 +16,8 @@
 
 
 namespace DataLoader\DataLoader;
+use DataLoader\DataLoader\AbstractDataLoader;
+use DataLoader\Db\Table\EventPerformers as EventPerformersTable;
 
 
 /**
@@ -126,7 +128,7 @@ class Events extends AbstractDataLoader
     protected function _postSave($result)
     {
         // Create an object for the `tevoEventPerformers` table too
-        $epTable = new \DataLoader\Db\Table\EventPerformers();
+        $epTable = new EventPerformersTable();
 
         // Set arrays of performers we can append performerIds to
         $performerListPrimary = array();

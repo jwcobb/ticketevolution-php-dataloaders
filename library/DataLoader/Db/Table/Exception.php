@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Exception as ParentException;
 
 
 /**
@@ -26,6 +27,6 @@ namespace DataLoader\Db\Table;
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-class Exception extends \TicketEvolution\Db\Exception
+class Exception extends ParentException
 {
 }

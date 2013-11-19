@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\AbstractTable;
 
 
 /**
@@ -100,7 +101,7 @@ class Offices extends AbstractTable
      * @var array
      */
     protected $_referenceMap    = array(
-        'Brokerage'            => array(
+        'Brokerages'            => array(
             'columns'           => 'brokerageId',
             'refTableClass'     => 'DataLoader\Db\Table\Brokerages',
             'refColumns'        => 'brokerageId',

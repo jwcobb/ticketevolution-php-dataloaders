@@ -16,6 +16,7 @@
 
 
 namespace DataLoader;
+use DataLoader\DataLoader\AbstractDataLoader;
 
 
 /**
@@ -26,6 +27,6 @@ namespace DataLoader;
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-class DataLoader extends DataLoader\AbstractDataLoader
+class DataLoader extends AbstractDataLoader
 {
 }

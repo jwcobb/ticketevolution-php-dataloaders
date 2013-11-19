@@ -8,23 +8,23 @@
  * It is also available through the world-wide-web at this URL:
  * http://choosealicense.com/licenses/bsd-3-clause/
  *
- * @category    TicketEvolution
- * @package     TicketEvolution\Db
+ * @category    DataLoader
+ * @package     DataLoader
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
 
 
-namespace DataLoader\Db;
-use DataLoader\Exception as ParentException;
+namespace DataLoader;
+use Exception as BaseException;
 
 
 /**
- * @category    TicketEvolution
- * @package     TicketEvolution\Db
+ * @category    DataLoader
+ * @package     DataLoader
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-class Exception extends ParentException
+class Exception extends BaseException
 {
 }

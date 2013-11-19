@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table\Row;
+use DataLoader\Db\Exception as ParentException;
 
 
 /**
@@ -25,6 +26,6 @@ namespace DataLoader\Db\Table\Row;
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-class Exception extends \DataLoader\Db\Table\Exception
+class Exception extends ParentException
 {
 }

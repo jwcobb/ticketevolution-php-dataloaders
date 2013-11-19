@@ -16,6 +16,7 @@
 
 
 namespace DataLoader\DataLoader;
+use DataLoader\DataLoader\AbstractDataLoader;
 
 
 /**

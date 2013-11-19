@@ -17,6 +17,7 @@
 
 
 namespace DataLoader\Db\Table;
+use DataLoader\Db\Table\Row\AbstractRow;
 
 
 /**
@@ -29,6 +30,6 @@ namespace DataLoader\Db\Table;
  * @copyright   Copyright (c) 2013 J Cobb. (http://jcobb.org)
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
-class Row extends Row\AbstractRow
+class Row extends AbstractRow
 {
 }
