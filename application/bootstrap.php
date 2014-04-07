@@ -12,6 +12,13 @@
  * @license     http://choosealicense.com/licenses/bsd-3-clause/ BSD (3-Clause) License
  */
 
+/**
+* Checks if timezone set in php.ini
+* If not set default is Central Standard Time
+*/
+if(ini_get('date.timezone') == ''){
+    date_default_timezone_set('America/Chicago');
+}
 
 /**
  * Display errors

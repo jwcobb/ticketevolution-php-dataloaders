@@ -17,6 +17,13 @@
  * This file is just some code that was common to all the data-loaders
  */
 
+/**
+* Checks if timezone set in php.ini
+* If not set default is Central Standard Time
+*/
+if(ini_get('date.timezone') == ''){
+    date_default_timezone_set('America/Chicago');
+}
 
 /**
  * Set a $startTime variable to record when we started this script. This time
