@@ -85,7 +85,7 @@ class Venues extends AbstractDataLoader
             'streetAddress'                 => null,
             'extendedAddress'               => null,
             'locality'                      => null,
-            'regionCode'                    => null,
+            'region'                        => null,
             'postalCode'                    => null,
             'countryCode'                   => null,
             'latitude'                      => null,
@@ -105,7 +105,7 @@ class Venues extends AbstractDataLoader
             $this->_data['streetAddress']   = (string) $result->address->street_address;
             $this->_data['extendedAddress'] = (string) $result->address->extended_address;
             $this->_data['locality']        = (string) $result->address->locality;
-            $this->_data['regionCode']      = (string) $result->address->region;
+            $this->_data['region']          = (string) $result->address->region;
             $this->_data['postalCode']      = (string) $result->address->postal_code;
             $this->_data['countryCode']     = (string) $result->address->country_code;
             $this->_data['latitude']        = (float)  $result->address->latitude;
