@@ -69,7 +69,10 @@ $dlConfig['database']['params']['password']     = 'YOUR_DATABASE_PASSWORD';
  * If this isn't set in your php.ini set it here.
  * @link http://www.php.net/manual/en/timezones.america.php
  */
-//date_default_timezone_set('America/Phoenix');
-Zend_Locale::setDefault('en_US');
+if (ini_get('date.timezone') === '') {
+    date_default_timezone_set('UTC');
+}
+
+\Zend_Locale::setDefault('en_US');
 
 
