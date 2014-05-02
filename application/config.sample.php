@@ -45,7 +45,7 @@ $dlConfig['params']['buyerId']                  = (string) 'YOUR_OFFICEID_HERE';
 $dlConfig['params']['apiVersion']               = (string) '9';
 $dlConfig['params']['usePersistentConnections'] = (bool) true;
 
-//$cfg['params']['baseUri']                       = (string) 'https://api.sandbox.ticketevolution.com'; // Sandbox
+//$dlConfig['params']['baseUri']                       = (string) 'https://api.sandbox.ticketevolution.com'; // Sandbox
 $dlConfig['params']['baseUri']                  = (string) 'https://api.ticketevolution.com'; // Production
 
 
