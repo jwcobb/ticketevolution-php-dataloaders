@@ -204,14 +204,14 @@ class Offices extends AbstractDataLoader
 
             // Loop through the emails and add them to the `tevoOfficeEmails` table
             foreach ($result->hours as $hour) {
-                $openTime = new DateTime($hour->open);
-                $closeTime = new DateTime($hour->close);
+                $openTime = new DateTime($hour->operating_hour->open);
+                $closeTime = new DateTime($hour->operating_hour->close);
 
                 $data = array(
-                    'officeHoursId'     => (int)    $hour->id,
+                    'officeHoursId'     => (int)    $hour->operating_hour->id,
                     'officeId'          => (int)    $result->id,
-                    'dayOfWeek'         => (int)    $hour->day_of_week,
-                    'isClosed'          => (int)    $hour->closed,
+                    'dayOfWeek'         => (int)    $hour->operating_hour->day_of_week,
+                    'isClosed'          => (int)    $hour->operating_hour->closed,
                     'open'              => (string) $openTime->format(DateTime::MYSQL_TIME),
                     'close'             => (string) $closeTime->format(DateTime::MYSQL_TIME),
                     'officeHoursStatus' => (int)    1,
