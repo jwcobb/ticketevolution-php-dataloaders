@@ -1,4 +1,4 @@
-## 1.1.4 (October 13, 2015)
+## 1.1.5 (October 13, 2015)
 - Fix problem with saving Office hours due to change in API formatting.
 - Fill in missing Changelog info for 1.1.1–1.1.4
 
