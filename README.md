@@ -1,5 +1,8 @@
 # DataLoaders for caching catalog data from the Ticket Evolution API
 
+## Deprecated
+As of November 10, 2015 this project is deprecated and you should use [TEvo Harvester](https://github.com/jwcobb/tevo-harvester) instead.
+
 ## Release Information
 See [CHANGELOG.md](https://github.com/jwcobb/ticketevolution-php-dataloaders/blob/master/CHANGELOG.md)
 
